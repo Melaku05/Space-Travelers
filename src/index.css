@@ -19,7 +19,7 @@ body {
 
 .flex-row {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
 }
 
 .flex-col {
@@ -30,7 +30,6 @@ body {
 .br {
   border-right: 1px solid rgb(175, 175, 175) !important;
 }
-
 
 code {
   font-family:
@@ -59,6 +58,3 @@ code {
   margin-left: 40px;
   text-decoration: none;
 }
-
-
-
