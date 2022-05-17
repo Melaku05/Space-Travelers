@@ -14,6 +14,21 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(216, 216, 216);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.br {
+  border-right: 1px solid rgb(175, 175, 175) !important;
 }
 
 code {
@@ -24,4 +39,22 @@ code {
     Consolas,
     'Courier New',
     monospace;
+}
+
+.navbar {
+  width: 100%;
+  padding: 30px;
+  margin: 0 auto;
+  color: rgb(87, 129, 196);
+  background-color: #fff;
+}
+
+.navmenu {
+  list-style: none;
+}
+
+.navmenu a {
+  color: rgb(114, 150, 207);
+  margin-left: 40px;
+  text-decoration: none;
 }
