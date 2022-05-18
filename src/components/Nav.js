@@ -5,7 +5,7 @@ const Nav = () => (
   <nav className="navbar flex-row">
     <div className="flex-row">
       <ul id="menu" className="navmenu flex-row">
-        <img src={logo} style={{ width: '20px' }} alt="logo" />
+        <img src={logo} style={{ width: '30px' }} alt="logo" />
         <li style={{ marginLeft: '80em' }}>
           {' '}
           <NavLink exact to="/rockets" activClassName="active">
