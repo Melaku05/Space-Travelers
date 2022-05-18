@@ -8,7 +8,7 @@ const Missions = () => {
 
   useEffect(() => {
     if (!getAllMissions.length) dispatch(fetchMissionData());
-  },[dispatch]);
+  }, [dispatch]);
 
   const handleClick = ({ target }) => {
     const { id } = target;
@@ -19,34 +19,34 @@ const Missions = () => {
   const inactiveButton = <button type="button">Not a member</button>;
 
   return (
-      <table>
-        <thead>
-          <tr>
-            <th>Mission</th>
-            <th>description</th>
-            <th>Status</th>
-            <th aria-label="Empty cell" />
+    <table>
+      <thead>
+        <tr>
+          <th>Mission</th>
+          <th>description</th>
+          <th>Status</th>
+          <th aria-label="Empty cell" />
+        </tr>
+      </thead>
+      <tbody>
+        {getAllMissions.map((mission) => (mission.joined ? (
+          <tr key={mission.id}>
+            <td>{mission.name}</td>
+            <td>{mission.description}</td>
+            <td>{activeButton}</td>
+            <td><button id={mission.id} type="button" onClick={handleClick}>Leave Mission</button></td>
           </tr>
-        </thead>
-        <tbody>
-          {getAllMissions.map((mission) => (mission.joined ? (
+        )
+          : (
             <tr key={mission.id}>
               <td>{mission.name}</td>
               <td>{mission.description}</td>
-              <td>{activeButton}</td>
-              <td><button id={mission.id} type="button" onClick={handleClick}>Leave Mission</button></td>
+              <td>{inactiveButton}</td>
+              <td><button id={mission.id} type="button" onClick={handleClick}>Join Mission</button></td>
             </tr>
-          )
-            : (
-              <tr key={mission.id}>
-                <td>{mission.name}</td>
-                <td>{mission.description}</td>
-                <td>{inactiveButton}</td>
-                <td><button id={mission.id} type="button" onClick={handleClick}>Join Mission</button></td>
-              </tr>
-            )))}
-        </tbody>
-      </table>
+          )))}
+      </tbody>
+    </table>
   );
 };
 export default Missions;
