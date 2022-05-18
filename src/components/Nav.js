@@ -7,7 +7,7 @@ const Nav = () => (
   <header className="contained">
     <div className="logo-title">
       <img src={logo} alt="Logo" />
-      <h1>Space Travelers Hub</h1>
+      <h1>Space Traveler's Hub</h1>
     </div>
     <nav>
       <ul className="menu-list">
