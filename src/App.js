@@ -5,6 +5,7 @@ import Rockets from './components/Rockets';
 import MyProfile from './components/MyProfile';
 import Nav from './components/Navigation/Navigation';
 
+<<<<<<< HEAD
 const App = () => (
   <>
     <Nav />
@@ -15,5 +16,20 @@ const App = () => (
     </Routes>
   </>
 );
+=======
+function App() {
+  return (
+    <Router>
+      <Nav />
+      <Rockets />
+      <Missions />
+      <Routes>
+        <Route path="/" element={<Rockets />} />
+        <Route path="/missions" element={<Missions />} />
+      </Routes>
+    </Router>
+  );
+}
+>>>>>>> c8d13467a77222f0460ea63a7b2f806902d409cf
 
 export default App;
