@@ -1,20 +1,17 @@
-import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Missions from './components/Missions';
-import Rockets from './components/Rockets';
-import Nav from './components/Nav';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Nav';
+import routes from './routes';
 
 function App() {
   return (
-    <Router>
-      <Nav />
-      <Rockets />
-      <Missions />
+    <div className="App">
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Rockets />} />
-        <Route path="/missions" element={<Missions />} />
+        { routes.map((route) => (
+          <Route path={route.path} element={route.element} key={route.id} />
+        ))}
       </Routes>
-    </Router>
+    </div>
   );
 }
 

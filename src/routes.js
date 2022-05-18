@@ -1,18 +1,19 @@
+import MyProfile from './pages/MyProfile';
+import RocketsPage from './pages/RocketsPage';
+
 const routes = [
   {
     id: 0,
     path: '/',
     title: 'Rockets',
+    element: <RocketsPage />,
   },
+
   {
-    id: 1,
-    path: '/missions',
-    title: 'Missions',
-  },
-  {
-    id: 0,
+    id: 2,
     path: '/profile',
     title: 'My Profile',
+    element: <MyProfile />,
   },
 ];
 

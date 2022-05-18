@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import logo from '../images/logo.png';
 import routes from '../routes';
 import './Nav.css';
@@ -10,13 +11,16 @@ const Nav = () => (
     </div>
     <nav>
       <ul className="menu-list">
-        {
-          routes.map((route) => (
-            <li key={route.id}>
-              <a href={route.path}>{route.title}</a>
-            </li>
-          ))
-        }
+        {routes.map((route) => (
+          <li key={route.id}>
+            <NavLink
+              className={({ isActive }) => (isActive ? 'menu-item active' : 'menu-item')}
+              to={route.path}
+            >
+              {route.title}
+            </NavLink>
+          </li>
+        ))}
       </ul>
     </nav>
   </header>
