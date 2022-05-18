@@ -20,5 +20,6 @@ const Nav = () => (
       </ul>
     </nav>
   </header>
+  </header>
 );
 export default Nav;
