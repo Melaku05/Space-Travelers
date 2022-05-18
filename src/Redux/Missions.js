@@ -5,17 +5,17 @@ const baseUrl = 'https://api.spacexdata.com/v3/missions';
 export const fetchMissionData = createAsyncThunk(
   'action/fetchMissionData',
   async () => {
-    const res = fetch(baseUrl);
+    const res = await fetch(baseUrl);
     const data = await res.json();
-    const extactData = data.map((mission) => ({
+    const extractData = data.map((mission) => ({
       id: mission.mission_id,
       name: mission.mission_name,
-      description: mission.mission_description,
-      manufacturer: mission.mission_manufacturers[0],
+      description: mission.description,
+      manufacturer: mission.manufacturers[0],
       wiki: mission.wikipedia,
       joined: false,
     }));
-    return extactData;
+    return extractData;
   },
 );
 

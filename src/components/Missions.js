@@ -8,7 +8,7 @@ const Missions = () => {
 
   useEffect(() => {
     if (!getAllMissions.length) dispatch(fetchMissionData());
-  });
+  },[dispatch]);
 
   const handleClick = ({ target }) => {
     const { id } = target;
@@ -19,7 +19,6 @@ const Missions = () => {
   const inactiveButton = <button type="button">Not a member</button>;
 
   return (
-    <div>
       <table>
         <thead>
           <tr>
@@ -35,7 +34,7 @@ const Missions = () => {
               <td>{mission.name}</td>
               <td>{mission.description}</td>
               <td>{activeButton}</td>
-              <td><button type="button" onClick={handleClick}>Leave Mission</button></td>
+              <td><button id={mission.id} type="button" onClick={handleClick}>Leave Mission</button></td>
             </tr>
           )
             : (
@@ -43,13 +42,11 @@ const Missions = () => {
                 <td>{mission.name}</td>
                 <td>{mission.description}</td>
                 <td>{inactiveButton}</td>
-                <td><button type="button" onClick={handleClick}>Join Mission</button></td>
+                <td><button id={mission.id} type="button" onClick={handleClick}>Join Mission</button></td>
               </tr>
             )))}
         </tbody>
-
       </table>
-    </div>
   );
 };
 export default Missions;
