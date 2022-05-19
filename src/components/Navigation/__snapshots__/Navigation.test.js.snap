@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test missions component Render missions row 1`] = `
+<div
+  className="Navigation-bar"
+>
+  <h1
+    className="nav-title"
+  >
+    KanBan Project
+  </h1>
+  <div
+    className="navLinks"
+  >
+    <a
+      activeClassName="nav-active"
+      aria-current="page"
+      className="link-el active"
+      exact={true}
+      href="#/"
+      onClick={[Function]}
+    >
+      Rockets
+    </a>
+    <a
+      activeClassName="nav-active"
+      className="link-el"
+      exact={true}
+      href="#/Missions"
+      onClick={[Function]}
+    >
+      Missions
+    </a>
+    <a
+      activeClassName="nav-active"
+      className="link-el"
+      exact={true}
+      href="#/MyProfile"
+      onClick={[Function]}
+    >
+      My Profile
+    </a>
+  </div>
+</div>
+`;

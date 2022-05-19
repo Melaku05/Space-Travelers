@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchMissionData, updateMissionState } from '../Redux/Missions';
+import './Missions.css';
+import { fetchMissionData, updateMissionState } from '../../Redux/Missions';
 
 const Missions = () => {
   const getAllMissions = useSelector((state) => state.missions);
@@ -15,8 +16,8 @@ const Missions = () => {
     dispatch(updateMissionState(id));
   };
 
-  const activeButton = <button type="button">Active memeber</button>;
-  const inactiveButton = <button type="button">Not a member</button>;
+  const activeButton = <button type="button" className="active">Active memeber</button>;
+  const inactiveButton = <button type="button" className="inactive">Not a member</button>;
 
   return (
     <table>
@@ -29,22 +30,20 @@ const Missions = () => {
         </tr>
       </thead>
       <tbody>
-        {getAllMissions.map((mission) => (mission.joined ? (
+        {getAllMissions.map((mission) => (
           <tr key={mission.id}>
             <td>{mission.name}</td>
             <td>{mission.description}</td>
-            <td>{activeButton}</td>
-            <td><button id={mission.id} type="button" onClick={handleClick}>Leave Mission</button></td>
+            <td>
+              {mission.joined && activeButton}
+              {!mission.joined && inactiveButton}
+            </td>
+            <td>
+              {mission.joined && <button id={mission.id} className="join" type="button" onClick={handleClick}>Leave Mission</button>}
+              {!mission.joined && <button id={mission.id} className="leave" type="button" onClick={handleClick}>Join Mission</button>}
+            </td>
           </tr>
-        )
-          : (
-            <tr key={mission.id}>
-              <td>{mission.name}</td>
-              <td>{mission.description}</td>
-              <td>{inactiveButton}</td>
-              <td><button id={mission.id} type="button" onClick={handleClick}>Join Mission</button></td>
-            </tr>
-          )))}
+        ))}
       </tbody>
     </table>
   );

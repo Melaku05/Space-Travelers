@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test missions component Render missions row 1`] = `
+<div>
+  <div
+    className="myProfile-container"
+  >
+    <h2>
+      My missions
+    </h2>
+    <ul
+      className="joined-missions"
+    >
+      <li
+        className="mission-el"
+      >
+        You are not part of any mission
+      </li>
+    </ul>
+  </div>
+</div>
+`;

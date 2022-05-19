@@ -29,6 +29,7 @@ body {
 }
 
 .link-el {
+  background-color: rgb(183, 224, 240);
   text-decoration: none;
   padding: 10px;
   color: rgb(36, 36, 36);

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test missions component Render missions row 1`] = `
+<table>
+  <thead>
+    <tr>
+      <th>
+        Mission
+      </th>
+      <th>
+        description
+      </th>
+      <th>
+        Status
+      </th>
+      <th
+        aria-label="Empty cell"
+      />
+    </tr>
+  </thead>
+  <tbody />
+</table>
+`;

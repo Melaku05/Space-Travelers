@@ -1,0 +1,56 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+tr {
+  width: 100%;
+}
+
+th {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+td:first-child {
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #cac9c9;
+}
+
+button {
+  padding: 0.5rem;
+  border-radius: 7px;
+  width: max-content;
+}
+
+.inactive {
+  background-color: #c2c1c1;
+}
+
+.active {
+  background-color: #4386bf;
+  color: #fff;
+}
+
+.join {
+  border: 2px solid green;
+  color: green;
+  background: none;
+}
+
+.leave {
+  border: 2px solid red;
+  color: red;
+  background: none;
+}
