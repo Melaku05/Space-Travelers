@@ -7,7 +7,7 @@ const MyProfile = () => {
   const getAlljoins = getAllmissions.filter((mission) => mission.joined);
 
   return (
-    <div className='parent-container'>
+    <div className="parent-container">
       <div className="myProfile-container">
         <h2>My missions</h2>
         <ul className="joined-missions">
@@ -17,7 +17,7 @@ const MyProfile = () => {
               {' '}
               {mission.manufacturer}
             </li>
-          )) : <li  className="mission-el">You are not part of any mission</li> }
+          )) : <li className="mission-el">You are not part of any mission</li> }
         </ul>
       </div>
     </div>

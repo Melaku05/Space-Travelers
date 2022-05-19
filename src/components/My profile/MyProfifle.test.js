@@ -5,13 +5,13 @@ import store from '../Navigation/configuration';
 import MyProfile from './MyProfile';
 
 describe('test missions component', () => {
-    it('Render missions row', () => {
-        const app = renderer
-        .create(
-            <Provider store={store}>
-                <MyProfile />
-            </Provider>
-        ).toJSON();
-        expect(app).toMatchSnapshot()
-    })
-})
+  it('Render missions row', () => {
+    const app = renderer
+      .create(
+        <Provider store={store}>
+          <MyProfile />
+        </Provider>,
+      ).toJSON();
+    expect(app).toMatchSnapshot();
+  });
+});
