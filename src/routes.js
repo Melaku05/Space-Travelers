@@ -1,3 +1,4 @@
+import MissionsPage from './pages/MissionsPage';
 import MyProfile from './pages/MyProfile';
 import RocketsPage from './pages/RocketsPage';
 
@@ -8,7 +9,12 @@ const routes = [
     title: 'Rockets',
     element: <RocketsPage />,
   },
-
+  {
+    id: 1,
+    path: '/missions',
+    title: 'Missions',
+    element: <MissionsPage />,
+  },
   {
     id: 2,
     path: '/profile',
