@@ -8,14 +8,14 @@ const AllRockets = () => {
 
   return (
     <div className="contained">
-      {rockets.map((r) => (
-        <div key={r.id}>
+      {rockets.map((rockets) => (
+        <div key={rockets.id}>
           <Rocket
-            id={r.id}
-            name={r.name}
-            img={r.img}
-            desc={r.desc}
-            reserv={r.reserv}
+            id={rockets.id}
+            name={rockets.name}
+            img={rockets.img}
+            desc={rockets.desc}
+            reserv={rockets.reserv}
           />
         </div>
       ))}
