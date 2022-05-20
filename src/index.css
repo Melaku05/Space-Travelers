@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 :root {
   --black: #212121;
   --black-1: #707580;
   --black-2: #dadada;
   --purple: #4d17ff;
   --green: #0099b6;
+  --light-blue: #3b7b99;
+  --white: #fff;
 }
 
 * {
@@ -14,6 +18,12 @@
 body {
   padding-left: 40px;
   padding-right: 40px;
+}
+
+h1,
+h2,
+a {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .contained {
