@@ -1,19 +1,20 @@
-import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Missions from './components/Missions';
-import Rockets from './components/Rockets';
-import MyProfile from './components/MyProfile';
-import Nav from './components/Navigation/Navigation';
+import Navbar from './components/Nav';
+import routes from './routes';
 
-const App = () => (
-  <>
-    <Nav />
-    <Routes>
-      <Route path="/" exact element={<Rockets />} />
-      <Route path="/Missions" exact element={<Missions />} />
-      <Route path="/MyProfile" exact element={<MyProfile />} />
-    </Routes>
-  </>
-);
+function App() {
+  return (
+    <>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          { routes.map((route) => (
+            <Route path={route.path} element={route.element} key={route.id} />
+          ))}
+        </Routes>
+      </div>
+    </>
+  );
+}
 
 export default App;
